@@ -1,4 +1,5 @@
 const fs = require('fs') 
+const path = `./${process.argv[2]}`
 
 // les test 
 if(process.argv.length !== 3){
@@ -11,5 +12,6 @@ if(!fs.existsSync(path)){
   process.exit(1)
 }
 
-
 const txt = fs.readFileSync('file.txt','utf-8')
+const lineT = txt.split(`\n`)
+console.log(lineT.slice((lineT.length)-10).length)
