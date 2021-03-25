@@ -10,12 +10,13 @@ if(process.argv.length > 4){
 }
 
 //cas de l'option -n
-if(process.argv.length === 5){
+if(process.argv.length === 4){
+
   path = `./${process.argv[3]}`
   fileName = process.argv[3]
 
 
-  if(process.argv[2] !== '-l' || process.argv[2] !== '-w' || process.argv[2] !== '-c' ){
+  if(process.argv[2] !== '-l' && process.argv[2] !== '-w' && process.argv[2] !== '-c' ){
     console.log(`Error: if you choose the option the first argument exepts only -l , -w , -c`)
     process.exit(1)
   }
@@ -23,6 +24,7 @@ if(process.argv.length === 5){
 }
 
 if(!fs.existsSync(path)){
+  console.log(path)
   console.log(`Error: srcFile does not exist`)
   process.exit(1)
 }
