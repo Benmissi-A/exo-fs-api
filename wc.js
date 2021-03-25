@@ -1,5 +1,6 @@
 const fs = require('fs') 
 const path = `./${process.argv[2]}`
+let fileName = process.argv[2]
 
 //les test 
 if(process.argv.length !== 3){
@@ -14,4 +15,4 @@ if(!fs.existsSync(path)){
 
 const txt = fs.readFileSync('file.txt','utf-8')
 
-console.log(`${txt.split(`\n`).length} ${txt.split(` `).length} ${txt.length}`)
+console.log(`${txt.split(`\n`).length} ${txt.split(` `).length} ${txt.length} ${fileName}`)
