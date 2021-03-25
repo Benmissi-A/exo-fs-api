@@ -13,5 +13,5 @@ if(!fs.existsSync(path)){
 }
 
 const txt = fs.readFileSync('file.txt','utf-8')
-const lineT = txt.split(`\n`)
-console.log(lineT.slice((lineT.length)-10))
+
+console.log(`${txt.split(`\n`).length} ${txt.split(` `).length} ${txt.length}`)
